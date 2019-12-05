@@ -24,16 +24,6 @@ debug("args:", args)
 
 numbers = args.numbers
 
-if not numbers:
-    os.system("adb connect 192.168.0.241")
-    # aqui eu abro o zap no meu celular
-    os.system("adb shell am start -n com.whatsapp/com.whatsapp.Main")
-    # botão de unlock
-    os.system("adb shell input keyevent 82")
-    # botão do espaço
-    os.system("adb shell input keyevent 62")
-    sys.exit(0)
-
 debug("numbers:", numbers)
 number = ''.join(numbers)
 number = re.sub(r'\D+', '', number)
