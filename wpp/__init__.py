@@ -33,7 +33,7 @@ def main():
     number = ''.join(numbers)
     number = re.sub(r'\D+', '', number)
 
-    link = "https://wa.me/%s%s" % (number, f"?text={quote(args.message)}" if args.message else '')
+    link = "https://web.whatsapp.com/send?phone=%s%s" % (number, f"&text={quote(args.message)}" if args.message else '')
 
     if args.copy:
         pyperclip.copy(link)
